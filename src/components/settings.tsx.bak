@@ -44,12 +44,12 @@ export function Settings() {
               >
                 打开并登录 Bing
               </ExternalLink>
-              然后再打开
+              ，然后再打开
               <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge 接口</ExternalLink>
-              右键 检查 打开开发者工具，在网络里面找到 Create 接口 右键复制 复制为 cURL(bash)，粘贴到此处，然后保存。
+              右键 》检查。打开开发者工具，在网络里面找到 Create 接口 》右键复制》复制为 cURL(bash)，粘贴到此处，然后保存。
               <div className="h-2" />
               图文示例：
-              <ExternalLink href="https://docs.wdsj.one/img/curl.png">如何获取 BING_HEADER</ExternalLink>
+              <ExternalLink href="https://github.com/weaigc/bingo#如何获取%20BING_HEADER">如何获取 BING_HEADER</ExternalLink>
             </DialogDescription>
           </DialogHeader>
           <div className="flex gap-4">
@@ -87,7 +87,7 @@ export function Settings() {
                   try {
                     headerValue = atob(headerValue)
                   } catch (e) { }
-                  if (!/^\s*curl ['"]https:\/\/www\.bing\.com\/turing\/captcha\/challenge['"]/.test(headerValue)) {
+                  if (!/^\s*curl ['"]https:\/\/(www|cn)\.bing\.com\/turing\/captcha\/challenge['"]/.test(headerValue)) {
                     toast.error('格式不正确')
                     return
                   }
@@ -96,7 +96,7 @@ export function Settings() {
                 } else {
                   [...ChunkKeys, 'BING_COOKIE', 'BING_UA', 'BING_IP'].forEach(key => setCookie(key, ''))
                 }
-                setCookie('IMAGE_ONLY', imageOnly ? '1' : '0')
+                setCookie('IMAGE_ONLY', RegExp.$1 === 'cn' || imageOnly ? '1' : '0')
 
                 toast.success('保存成功')
                 setLoc('')

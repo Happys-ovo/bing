@@ -20,24 +20,30 @@ function getAction(error: ChatError, reset: () => void) {
     )
   }
   if (error.code === ErrorCode.BING_IP_FORBIDDEN) {
-    return "页面连接超时，请刷新页面或者清除cookie";
+    return (
+      <ExternalLink href="https://github.com/weaigc/bingo/issues">
+        你的服务器或代理已被封禁，请更换服务器或使用代理重试
+      </ExternalLink>
+    )
   }
-
   if (error.code === ErrorCode.BING_TRY_LATER) {
-    return "页面连接超时，请刷新页面或者清除cookie";
+    return (
+      <a href={`#dialog="reset"`}>
+        创建会话失败，请手动重试
+      </a>
+    )
   }
-
   if (error.code === ErrorCode.BING_FORBIDDEN) {
     return (
       <ExternalLink href="https://bing.com/new">
-        你的账号已在黑名单 请尝试更换账号及申请解封
+        你的账号已在黑名单，请尝试更换账号及申请解封
       </ExternalLink>
     )
   }
   if (error.code === ErrorCode.CONVERSATION_LIMIT) {
     return (
       <div>
-        当前话题已中止，请
+        当前话题已中止，请点
         <a href={`#dialog="reset"`}>重新开始</a>
         开启新的对话
       </div>
