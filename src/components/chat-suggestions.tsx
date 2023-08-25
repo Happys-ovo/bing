@@ -24,7 +24,9 @@ export function ChatSuggestions({ setInput, suggestions = [] }: ChatSuggestionsP
 
   useEffect(() => {
     setSuggestions(suggestions)
-    window.scrollBy(0, 800)
+    setTimeout(() => {
+      window.scrollBy(0, 800)
+    }, 200)
   }, [])
 
   return currentSuggestions?.length ? (
