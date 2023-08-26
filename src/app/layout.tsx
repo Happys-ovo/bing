@@ -8,10 +8,10 @@ import '@/app/globals.scss'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Bing ChatWeb',
-    template: `%s - Bing ChatWeb`
+    default: 'Bing',
+    template: `%s - Bing`
   },
-  description: 'Bing ChatWeb.',
+  description: 'Bing',
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
     { media: '(prefers-color-scheme: dark)', color: 'dark' }
