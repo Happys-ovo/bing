@@ -61,7 +61,7 @@ export function Settings() {
             onChange={e => setCurlValue(e.target.value)}
           />
           <div className="flex gap-2">
-            关闭绘图功能
+            使用绘图功能
             <Switch
               checked={imageOnly}
               className={`${imageOnly ? 'bg-blue-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 items-center rounded-full`}
