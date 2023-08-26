@@ -57,11 +57,11 @@ export function Settings() {
           </div>
           <Input
             value={curlValue}
-            placeholder="在此填写用户信息，格式: curl 'https://www.bing.com/turing/captcha/challenge' ..."
+            placeholder="在此填写用户信息"
             onChange={e => setCurlValue(e.target.value)}
           />
           <div className="flex gap-2">
-            身份信息仅用于画图（推荐）
+            使用绘图功能
             <Switch
               checked={imageOnly}
               className={`${imageOnly ? 'bg-blue-600' : 'bg-gray-200'} relative inline-flex h-6 w-11 items-center rounded-full`}
