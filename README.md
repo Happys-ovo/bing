@@ -14,7 +14,7 @@ license: mit
 
 Bingo，一个让你呼吸顺畅 New Bing。
 
-高度还原 New Bing 网页版的主要操作，国内可用，兼容绝大多数微软 Bing AI 的功能，可自行部署使用。
+高度还原 New Bing 网页版的主要操作，国内可用，兼容绝大多数微软 Bing AI 的功能。
 
 ## License
 
