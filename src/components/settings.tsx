@@ -46,7 +46,7 @@ export function Settings() {
               </ExternalLink>
               然后再打开
               <ExternalLink href="https://www.bing.com/turing/captcha/challenge">Challenge 接口</ExternalLink>
-              右键 检查 打开开发者工具，在网络里面找到 Create 接口 右键复制 复制为 cURL(bash)，粘贴到此处，然后保存。
+              右键 检查 打开开发者工具，在网络里面找到 Challenge 属性 右键复制 复制为 cURL(bash)，粘贴到此处，然后保存。
               <div className="h-2" />
               图文示例：
               <ExternalLink href="https://docs.wdsj.one/img/curl.png">如何获取 BING_HEADER</ExternalLink>
