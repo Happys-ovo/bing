@@ -1,6 +1,6 @@
 ---
 title: bing
-emoji: 😊
+emoji: 😡
 colorFrom: red
 colorTo: red
 sdk: docker
