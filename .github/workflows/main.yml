@@ -18,9 +18,9 @@ jobs:
           HF_USERNAME: Happys
           SPACE_NAME: bing
         run: |
-          git clone https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME huggingface
+          git clone https://$HF_USERNAME:wumaoyuanW1*@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME huggingface
           cd huggingface
           git config user.name Happys
           git config user.email admin@wdsj.one
           git commit -am "auto push and build" --amend
-          git push https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
+          git push https://$HF_USERNAME:wumaoyuanW1*@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
