@@ -23,5 +23,5 @@ jobs:
           cd huggingface
           git config user.name Happys
           git config user.email admin@wdsj.one
-          git commit -am "auto push and build" --amend
+          git commit -m "auto push and build"
           git push https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
