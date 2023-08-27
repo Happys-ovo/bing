@@ -12,18 +12,15 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - run: dir/
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_USERNAME: Happys
           SPACE_NAME: bing
         run: |
-          dir
           git clone https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME huggingface
-          rm -rf huggingface/!(.git)
           cd huggingface
           git config user.name Happys
           git config user.email admin@wdsj.one
-          git commit -am "auto push and build" --amend
+          git commit -am "Auto Push Sebject" --amend
           git push https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
