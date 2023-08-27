@@ -12,6 +12,7 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
+      - run: dir/
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
