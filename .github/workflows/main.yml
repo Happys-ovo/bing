@@ -21,4 +21,8 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_USERNAME: hf4all
           SPACE_NAME: bingo
-        run: git push https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
+        run: |
+           git config user.name Happys
+           git config user.email admin@wdsj.one
+           git commit -am "auto build" --amend
+           git push https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
