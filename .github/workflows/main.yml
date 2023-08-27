@@ -18,7 +18,6 @@ jobs:
           HF_USERNAME: Happys
           SPACE_NAME: bing
         run: |
-          git lfs install
           git clone https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME huggingface
           cd huggingface
           git config user.name Happys
