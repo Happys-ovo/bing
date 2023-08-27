@@ -9,18 +9,16 @@ on:
   workflow_dispatch:
 
 jobs:
-  sync:
+  sync-to-hub:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+          lfs: true
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-          HF_USERNAME: Happys
-          SPACE_NAME: bing
-        run: |
-          git clone https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME huggingface
-          cd huggingface
-          git config user.name Happys
-          git config user.email admin@wdsj.one
-          git commit -am "Auto Push Sebject" --amend
-          git push https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
+          HF_USERNAME: hf4all
+          SPACE_NAME: bingo
+        run: git push https://$HF_USERNAME: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@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME main -f
