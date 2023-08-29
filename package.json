@@ -36,7 +36,7 @@
     "ifw": "^0.0.2",
     "immer": "^9.0.19",
     "inter-ui": "^3.19.3",
-    "jotai": "^2.2.1",
+    "jotai": "^2.4.0",
     "jotai-immer": "^0.2.0",
     "jotai-location": "^0.5.1",
     "js-base64": "^3.7.5",
