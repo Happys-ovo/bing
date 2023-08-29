@@ -1,12 +1,7 @@
 name: Sync to Hugging Face hub
-on:
-  push:
-  pull_request:
-    branches:
-      - master
+on: [push]
 
-  # to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  # to run this workflow manually from the Actions tabworkflow_dispatch:
 
 jobs:
   sync-to-hub:
